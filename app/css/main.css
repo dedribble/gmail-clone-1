@@ -1,0 +1,10 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  font-size: 16px;
+  color: var(--black);
+}
+

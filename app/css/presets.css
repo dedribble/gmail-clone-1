@@ -1,0 +1,19 @@
+:root {
+
+  /* ==== FONTS ==== */
+  --font: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-sec: Arial, Helvetica, sans-serif;
+
+  --font-m: 1rem;
+  --font-sm: calc(14 / 1rem);
+
+  /* ==== COLORS ==== */
+  --black: #000000;
+  --grey: ;
+  --lightgrey: ;
+  --icons: ;
+
+  /* UNITS */
+  --opacity: 0.35;
+
+}
