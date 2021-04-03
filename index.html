@@ -16,7 +16,7 @@
 
 <body>
 
-  <div id="wrapper" >
+  <div class="body-wrapper" >
 
     <!-- HEADER -->
 
@@ -54,7 +54,7 @@
 
       </form>
 
-        <div class="header-group" >
+      <div class="header-group" >
 
           <div class="icons">
             <button id="header-info" class="btn tooltip" data-info="Support">
@@ -83,241 +83,256 @@
 
     </header>
 
-    <!-- CONTENT -->
+    <!-- LEFT SIDEBAR -->
 
-    <div class="inbox-container">
+    <section class="left-sidebar">
 
-      <!-- LABEL LEFT SIDEBAR -->
+      <div class="left-sidebar-compose">
+        <button class="sidebar-btn-compose">
+          <img src="/app/assets/icons/create_32dp.png" alt="Compose a new email" class="sidebar-btn-compose-icon">
+          <span class="sidebar-btn-compose-title">Compose</span>
+        </button>
+      </div>
 
-      <div class="left-sidebar">
+      <div class="left-siderbar-label">
+        <ul class="labels category-item-list">
 
-        <div class="left-sidebar-compose">
-          <button class="sidebar-btn-compose">
-            <img src="/app/assets/icons/create_32dp.png" alt="Compose a new email" class="sidebar-btn-compose-icon">
-            <span class="sidebar-btn-compose-title">Compose</span>
-          </button>
-        </div>
+          <li class="category-item active">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg>
+              <span class="category-item-title">Inbox</span>
+            </div>
+            <span class="category-item-number" >32</span>
+          </li>
 
-        <!-- LABELS -->
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <span class="category-item-title">Starred</span>
+            </div>
+            <span class="category-item-number">5</span>
+          </li>
 
-        <div class="left-siderbar-category">
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M15.29,16.71L11,12.41V7h2v4.59 l3.71,3.71L15.29,16.71z"/></g></svg>
+              <span class="category-item-title">Snoozed</span>
+            </div>
+            <span class="category-item-number"></span>
+          </li>
 
-          <ul class="category-item-list labels">
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              <span class="category-item-title">Sent</span>
+            </div>
+            <span class="category-item-number"></span>
+          </li>
 
-            <li class="category-item category-item-active">
-              <div>
-                <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg>
-                <span class="category-item-title">Inbox</span>
-              </div>
-              <span class="category-item-number" >32</span>
-            </li>
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/></svg>
+              <span class="category-item-title">Drafts</span>
+            </div>
+            <span class="category-item-number"></span>
+          </li>
 
-            <li class="category-item">
-              <div>
-                <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <span class="category-item-title">Starred</span>
-              </div>
-              <span class="category-item-number">5</span>
-            </li>
-
-            <li class="category-item">
-              <div>
-                <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M15.29,16.71L11,12.41V7h2v4.59 l3.71,3.71L15.29,16.71z"/></g></svg>
-                <span class="category-item-title">Snoozed</span>
-              </div>
-              <span class="category-item-number"></span>
-            </li>
-
-            <li class="category-item">
-              <div>
-                <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                <span class="category-item-title">Sent</span>
-              </div>
-              <span class="category-item-number"></span>
-            </li>
-
-            <li class="category-item">
-              <div>
-                <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/></svg>
-                <span class="category-item-title">Drafts</span>
-              </div>
-              <span class="category-item-number"></span>
-            </li>
-
-            <ul class="category-item category-item-sub">
-              <div>
-                <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
-                <span class="category-item-title">More</span>
-              </div>
-
-            </ul>
+          <ul class="category-item category-item-sub">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+              <span class="category-item-title">More</span>
+            </div>
 
           </ul>
 
-          <!-- CONNECT  -->
+        </ul>
+      </div>
 
-          <div>
+      <!-- CONNECT  -->
 
-            <div class="connect meets" >
+      <div class="left-sidebar-connect" >
 
-              <button class="drag-btn"></button>
-  
-              <span class="category-title" >Meets</span>
-  
-              <div class="category-item" >
-  
-                <div>
-                  <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
-                  <span class="category-item-title" >New meeting</span>
-                </div>
-              </div>
-              
-              <div class="category-item" >
-                <div>
-                  <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/><path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/></svg>
-                  <span class="category-item-title" >Join a meeting</span>
-                </div>
-              </div>
-  
+        <div class="connect meets" >
+          <div class="drag-btn-container">
+            <button class="drag-btn"></button>
+          </div>
+
+          <span class="category-title" >Meets</span>
+
+          <div class="category-item" >
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+              <span class="category-item-title" >New meeting</span>
             </div>
-            
-            <div class="connect hangouts" >
-  
-              <span class="category-title" >Hangouts</span>
-
-              <div class="category-img"></div>
-  
-              <div class="category-item-btn">
-                <button class="sidebar-btn-lg">
-                  Sign in
-                </button>
-              </div>
-
-              <div class="connect-info">
-                <span>Signing in will sign you into Hangouts across Google</span>
-                <a href="#" class="connect-link">
-                Learn more
-                </a>
-              </div>
-  
+          </div>
+          
+          <div class="category-item" >
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/><path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/></svg>
+              <span class="category-item-title" >Join a meeting</span>
             </div>
+          </div>
 
+        </div>
+        
+        <div class="connect hangouts" >
+
+          <span class="category-title" >Hangouts</span>
+
+          <div class="hangouts-img" >
+            <img class="category-img" src="/app/assets/icons/hangouts-common.png" alt="">
+          </div>
+
+          <div class="category-item-btn">
+            <button class="sidebar-btn-lg">
+              Sign in
+            </button>
+          </div>
+
+          <div class="connect-info">
+            <span>Signing in will sign you into Hangouts across Google</span>
+            <a href="#" class="connect-link">
+            Learn more
+            </a>
           </div>
 
         </div>
 
       </div>
 
-      <!-- INBOX CONTENT -->
+      <div class="left-sidebar-footer">
 
-      <div class="inbox" >
+        <button class="btn btn-sidebar">
+          <img src="app/assets/icons/person_black_24dp.svg" class="sidebar-btn-icon btn-icon-sm">
+        </button>
 
-        <div class="inbox-menu">
+        <button class="btn btn-sidebar active">
+          <img src="app/assets/icons/hangout_black_20dp.png" class="sidebar-btn-icon btn-icon-sm">
+        </butotn>
 
-          <div class="inbox-menu-group">
+      </div>
 
-            <button class="btn">
-              <img src="/app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="" class="btn-icon btn-icon-sm">
-              <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="" class="btn-icon btn-icon-sm">
+    </section>
+
+    <!-- CONTENT -->
+
+    <section class="inbox" >
+
+      <div class="inbox-menu">
+
+        <div class="inbox-menu-group">
+
+          <div class="inbox-btn-group" >
+            <button class="btn-alt">
+              <img src="/app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="" class="btn-icon-sm btn-icon-alt">
             </button>
 
-            <button class="btn">
-              <img src="/app/assets/icons/refresh_black_24dp.svg" alt="" class="btn-icon btn-icon-sm">
+            <button class="btn-alt">
+              <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="" class="btn-icon-sm btn-icon-alt">
             </button>
-
-            <button class="btn">
-              <img src="/app/assets/icons/more_vert_black_20dp.png" alt="" class="btn-icon btn-icon-sm">
-            </button>
-
           </div>
 
-          <div class="inbox-menu-group">
+          <button class="btn">
+            <img src="/app/assets/icons/refresh_black_24dp.svg" alt="" class="btn-icon btn-icon-sm ">
+          </button>
 
-            <div class="inbox-menu-pagination">
-              1-50 of 262
-            </div>
+          <button class="btn">
+            <img src="/app/assets/icons/more_vert_black_20dp.png" alt="" class="btn-icon btn-icon-sm">
+          </button>
 
-            <div class="inbox-menu-pagination-btn">
-              <button class="btn btn-nofill pagination-btn-icon">
-                <img src="/app/assets/icons/chevron_left_black_24dp.svg" alt="Previous" class="btn-icon-sm">
-              </button>
-              <button class="btn pagination-btn-icon">
-                <img src="/app/assets/icons/chevron_right_black_24dp.svg" alt="Next" class="btn-icon-sm">
-              </button>
-            </div>
+        </div>
 
-            <button class="btn">
-              <img src="/app/assets/icons/keyboard_black_24dp.svg" alt="" class="btn-icon  btn-icon-sm" >
-              <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="" class="btn-icon btn-icon-sm">
+        <div class="inbox-menu-group">
+
+          <div class="inbox-menu-pagination">
+            1-50 of 262
+          </div>
+
+          <div class="inbox-menu-pagination-btn">
+            <button class="btn btn-nofill pagination-btn-icon">
+              <img src="/app/assets/icons/chevron_left_black_24dp.svg" alt="Previous" class="btn-icon-sm">
             </button>
 
+            <button class="btn pagination-btn-icon">
+              <img src="/app/assets/icons/chevron_right_black_24dp.svg" alt="Next" class="btn-icon-sm">
+            </button>
+          </div>
+
+          <div class="inbox-btn-group" >
+            <button class="btn-alt">
+              <img src="/app/assets/icons/keyboard_black_24dp.svg" alt="" class="btn-icon-sm btn-icon-alt" >
+            </button>
+
+            <button class="btn-alt">
+              <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="" class="btn-icon-sm btn-icon-alt">
+            </button>
           </div>
 
         </div>
 
-        <!-- INBOX  MESSAGES -->
+      </div>
 
-        <div class="inbox-messages-container">
+      <!-- INBOX  MESSAGES -->
 
-          <div class="inbox-category">
+      <div class="inbox-messages-container">
 
-            <div class="inbox-category-item">
-              <!-- <img src="/app/assets/icons/" alt="" class="inbox-category-icon"> -->
-              <span class="inbox-category-title">Primary</span>
-            </div>
+        <div class="inbox-category">
 
-            <div class="inbox-category-item">
-              <!-- <img src="/app/assets/icons/" alt="" class="inbox-category-icon"> -->
-              <span class="inbox-category-title">Social</span>
-            </div>
-
-            <div class="inbox-category-item">
-              <!-- <img src="/app/assets/icons/" alt="" class="inbox-category-icon"> -->
-              <span class="inbox-category-title">Promotions</span>
-            </div>
-
+          <div class="inbox-category-item">
+            <svg class="inbox-category-icon btn-icon-sm" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg>
+            <span class="inbox-category-title">Primary</span>
           </div>
 
-          <div class="inbox-messages">
+          <div class="inbox-category-item">
+            <svg class="inbox-category-icon btn-icon-sm" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            <span class="inbox-category-title">Social</span>
+          </div>
 
-            <div class="message">
+          <div class="inbox-category-item">
+            <svg class="inbox-category-icon btn-icon-sm" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+            <span class="inbox-category-title">Promotions</span>
+          </div>
+
+        </div>
+
+        <div class="inbox-messages">
+
+          <div class="message">
+
+            <button class="message-btn">
+              <img src="/app/assets/icons/" alt="Select" class="message-btn-icon">
+            </button>
+
+            <div class="message-options">
 
               <button class="message-btn">
-                <img src="/app/assets/icons/" alt="Select" class="message-btn-icon">
+                <img src="/app/assets/icons/" alt="Archive" class="message-btn-icon">
               </button>
 
-              <div class="message-options">
-
-                <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Archive" class="message-btn-icon">
-                </button>
-
-                <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Delete" class="message-btn-icon">
-                </button>
-
-                <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Mark as unread" class="message-btn-icon">
-                </button>
-
-                <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Snooze class=" message-btn-icon">
-                </button>
-
-              </div>
-
-              <button class="message-btn message-btn-star">
-                <img src="/app/assets/icons/" alt="Not starred" class="message-btn-icon">
+              <button class="message-btn">
+                <img src="/app/assets/icons/" alt="Delete" class="message-btn-icon">
               </button>
 
+              <button class="message-btn">
+                <img src="/app/assets/icons/" alt="Mark as unread" class="message-btn-icon">
+              </button>
 
-              <span class="message-title">no-reply</span>\
-              <span class="message-subject">Notice of completion of deletion request</span>
-              <span class="message-content"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta error
-                beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis
-                harum at. Facere, exercitationem. </span>
+              <button class="message-btn">
+                <img src="/app/assets/icons/" alt="Snooze class=" message-btn-icon">
+              </button>
 
             </div>
+
+            <button class="message-btn message-btn-star">
+              <img src="/app/assets/icons/" alt="Not starred" class="message-btn-icon">
+            </button>
+
+
+            <span class="message-title">no-reply</span>\
+            <span class="message-subject">Notice of completion of deletion request</span>
+            <span class="message-content"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta error
+              beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis
+              harum at. Facere, exercitationem. </span>
 
           </div>
 
@@ -325,37 +340,37 @@
 
       </div>
 
-      <!-- APPS RIGHT SIDEBAR -->
+    </section>
 
-      <div class="apps-container" >
+    <!-- RIGHT SIDEBAR -->
 
-        <div class="apps-item">
-          <button class="apps-btn">
-            <img src="" alt="" class="apps-btn-icon">
-          </button>
-        </div>
+    <section class="apps-container" >
 
-        <div class="apps-item">
-          <button class="apps-btn">
-            <img src="" alt="" class="apps-btn-icon">
-          </button>
-        </div>
-
-        <div class="apps-item">
-          <button class="apps-btn">
-            <img src="" alt="" class="apps-btn-icon">
-          </button>
-        </div>
-
-        <div class="apps-item">
-          <button class="apps-btn">
-            <img src="" alt="" class="apps-btn-icon">
-          </button>
-        </div>
-
+      <div class="apps-item">
+        <button class="apps-btn">
+          <img src="" alt="" class="apps-btn-icon">
+        </button>
       </div>
 
-    </div>
+      <div class="apps-item">
+        <button class="apps-btn">
+          <img src="" alt="" class="apps-btn-icon">
+        </button>
+      </div>
+
+      <div class="apps-item">
+        <button class="apps-btn">
+          <img src="" alt="" class="apps-btn-icon">
+        </button>
+      </div>
+
+      <div class="apps-item">
+        <button class="apps-btn">
+          <img src="" alt="" class="apps-btn-icon">
+        </button>
+      </div>
+
+    </section>
 
   </div>
 
