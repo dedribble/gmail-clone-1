@@ -24,11 +24,13 @@
 
       <div class="header-group">
 
-        <button id="header-menu" class="header-btn header-menu" btn-info="Main menu" >
-          <img src="/app/assets/icons/menu_black_24dp.svg" alt="Main menu" class="header-btn-icon">
-        </button>
+        <div class="icons">
+          <button id="header-menu" class="header-btn header-menu tooltip" data-info="Main menu" >
+            <img src="/app/assets/icons/menu_black_24dp.svg" alt="Main menu" class="header-btn-icon">
+          </button>
+        </div>
   
-        <a class="header-logo">
+        <a href="#" class="header-logo" >
           <img src="/app/assets/icons/logo_gmail_lockup_default_1x_r2.png" alt="Gmail" >
         </a>
 
@@ -36,43 +38,54 @@
 
       <form class="header-search" action="">
 
-        <button id="js-header-search" class="header-btn tooltip"  btn-info="Search">
-          <img src="/app/assets/icons/search_black_24dp.svg" alt="Search"class="header-btn-icon">
-        </button>
+        <div class="icons">
+          <button id="js-header-search" class="header-btn tooltip"  data-info="Search">
+            <img src="/app/assets/icons/search_black_24dp.svg" alt="Search"class="header-btn-icon">
+          </button>
+        </div>
 
         <input type="search" class="header-search-input" placeholder="Search mail">
 
-        <button id="header-search-options" class="header-btn tooltip" btn-info="Options">
-          <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Options" class="header-btn-icon">
-        </button>
+        <div class="icons">
+          <button id="header-search-options" class="header-btn tooltip" data-info="Options">
+            <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Options" class="header-btn-icon">
+          </button>
+        </div>
 
       </form>
 
-      <div class="header-group" >
+        <div class="header-group" >
 
-        <button id="header-info" class="header-btn tooltip" btn-info="Support">
-          <img src="/app/assets/icons/help_outline_black_24dp.svg" alt="Support" class="header-btn-icon">
-        </button>
-  
-        <button id="header-settings" class="header-btn tooltip" btn-info="Settings">
-          <img src="/app/assets/icons/settings_black_24dp.svg" alt="Settings"  class="header-btn-icon">
-        </button>
-  
-        <button id="header-apps" class="header-btn tooltip" btn-info="Google apps">
-          <img src="/app/assets/icons/apps_black_24dp.svg" alt="Google apps" class="header-btn-icon">
-        </button>
-  
-        <button id="header-profile" class="header-btn tooltip" btn-info="username@gmail.com" >
-          <img src="/app/assets/img/profile.png" alt="username@gmail.com" class="header-btn-icon header-profile">
-        </button>
+          <div class="icons">
+            <button id="header-info" class="header-btn tooltip" data-info="Support">
+              <img src="/app/assets/icons/help_outline_black_24dp.svg" alt="Support" class="header-btn-icon">
+            </button>
+          </div>
 
+          <div class="icons">
+            <button id="header-settings" class="header-btn tooltip" data-info="Settings">
+              <img src="/app/assets/icons/settings_black_24dp.svg" alt="Settings"  class="header-btn-icon">
+            </button>
+          </div>
+
+          <div class="icons">
+            <button id="header-apps" class="header-btn tooltip" data-info="Google apps">
+              <img src="/app/assets/icons/apps_black_24dp.svg" alt="Google apps" class="header-btn-icon">
+            </button>
+          </div>
+
+          <div class="icons">
+            <button id="header-profile" class="header-btn tooltip" data-info="username@gmail.com" >
+              <img src="/app/assets/img/profile.png" alt="username@gmail.com" class="header-btn-icon header-profile">
+            </button>
+          </div>
       </div>
 
     </header>
 
     <!-- CONTENT -->
 
-    <div class="inbox-container" style="display: none;">
+    <div class="inbox-container">
 
       <!-- LABEL LEFT SIDEBAR -->
 
@@ -80,7 +93,7 @@
 
         <div class="left-sidebar-compose">
           <button class="sidebar-btn-compose">
-            <img src="" alt="" class="sidebar-btn-compose-icon">
+            <img src="/app/assets/icons/create_32dp.png" alt="Compose a new email" class="sidebar-btn-compose-icon">
             <span class="sidebar-btn-compose-title">Compose</span>
           </button>
         </div>
@@ -147,7 +160,7 @@
 
       <!-- INBOX CONTENT -->
 
-      <div class="inbox-container">
+      <div class="inbox" >
 
         <div class="inbox-menu">
 
@@ -262,7 +275,7 @@
 
       <!-- APPS RIGHT SIDEBAR -->
 
-      <div class="apps-conatiner">
+      <div class="apps-container" >
 
         <div class="apps-item">
           <button class="apps-btn">
