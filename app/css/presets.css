@@ -10,12 +10,15 @@
   /* ==== COLORS ==== */
   --black: #000000;
   --grey: #3c4043;
+  --red: #d93025;
+  --blue: #427fed;
+  --fill-red: #fce8e6;
   --fill-grey: #f1f3f4;
-  --fill-hover: rgba(60,64,67,0.078);
+  --fill-hover: #3c404314;
   --icons: ;
 
   /* UNITS */
-  --opacity: 0.6;
+  --opacity: 0.54;
 
 }
 
