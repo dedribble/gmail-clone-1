@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,59 +10,73 @@
   <link rel="stylesheet" href="/app/css/reset.css">
   <link rel="stylesheet" href="/app/css/presets.css">
   <link rel="stylesheet" href="/app/css/main.css">
-  
+  <link rel="stylesheet" href="/app/css/_main.css">
+
 </head>
+
 <body>
 
-  <div>
+  <div id="wrapper" >
+
+    <!-- HEADER -->
+
     <header class="header">
 
-      <button id="header-menu" class="header-btn" >
-        <img src="/app/assets/icons/" alt="Main menu" class="header-btn-icon icon-tooltip">
-      </button>
+      <div class="header-group">
 
-      <a class="header-logo">
-        <img src="/app/assets/icons/" alt="Gmail" class="gmail-logo">
-        <span class="header-title">Gmail</span>
-      </a>
+        <button id="header-menu" class="header-btn header-menu" btn-info="Main menu" >
+          <img src="/app/assets/icons/menu_black_24dp.svg" alt="Main menu" class="header-btn-icon">
+        </button>
+  
+        <a class="header-logo">
+          <img src="/app/assets/icons/logo_gmail_lockup_default_1x_r2.png" alt="Gmail" >
+        </a>
+
+      </div>
 
       <form class="header-search" action="">
 
-        <button id="js-header-search" class="header-btn">
-          <img src="/app/assets/icons/" alt="Search" class="header-btn-icon icon-tooltip">
+        <button id="js-header-search" class="header-btn tooltip"  btn-info="Search">
+          <img src="/app/assets/icons/search_black_24dp.svg" alt="Search"class="header-btn-icon">
         </button>
 
-        <input type="search" class="header-search-input">
+        <input type="search" class="header-search-input" placeholder="Search mail">
 
-        <button id="header-search-options" class="header-btn">
-          <img src="/app/assets/icons/" alt="Options" class="header-btn-icon icon-tooltip">
+        <button id="header-search-options" class="header-btn tooltip" btn-info="Options">
+          <img src="/app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Options" class="header-btn-icon">
         </button>
 
       </form>
 
-      <button id="header-info" class="header-btn">
-        <img src="/app/assets/icons/" alt="Support" class="header-btn-icon">
-      </button>
+      <div class="header-group" >
 
-      <button id="header-settings" class="header-btn">
-        <img src="/app/assets/icons/" alt="Settings" class="header-btn-icon icon-tooltip">
-      </button>
+        <button id="header-info" class="header-btn tooltip" btn-info="Support">
+          <img src="/app/assets/icons/help_outline_black_24dp.svg" alt="Support" class="header-btn-icon">
+        </button>
+  
+        <button id="header-settings" class="header-btn tooltip" btn-info="Settings">
+          <img src="/app/assets/icons/settings_black_24dp.svg" alt="Settings"  class="header-btn-icon">
+        </button>
+  
+        <button id="header-apps" class="header-btn tooltip" btn-info="Google apps">
+          <img src="/app/assets/icons/apps_black_24dp.svg" alt="Google apps" class="header-btn-icon">
+        </button>
+  
+        <button id="header-profile" class="header-btn tooltip" btn-info="username@gmail.com" >
+          <img src="/app/assets/img/profile.png" alt="username@gmail.com" class="header-btn-icon header-profile">
+        </button>
 
-      <button id="header-apps" class="header-btn">
-        <img src="/app/assets/icons/" alt="Google apps" class="header-btn-icon icon-tooltip">
-      </button>
-
-      <button id="header-profile" class="header-btn">
-        <img src="/app/assets/icons/" alt="usrename@gmail.com" class="header-btn-icon icon-tooltip">
-      </button>
+      </div>
 
     </header>
+
+    <!-- CONTENT -->
 
     <div class="inbox-container" style="display: none;">
 
       <!-- LABEL LEFT SIDEBAR -->
 
-      <div class="left-sidebar" >
+      <div class="left-sidebar">
 
         <div class="left-sidebar-compose">
           <button class="sidebar-btn-compose">
@@ -115,17 +130,17 @@
             </li>
 
 
-  
-            <ul class="category-item category-item-sub" >
+
+            <ul class="category-item category-item-sub">
               <div>
                 <img src="/app/assets/icons/" alt="" class="category-item-icon">
                 <span class="category-item-title">More</span>
               </div>
 
             </ul>
-  
+
           </ul>
-  
+
         </div>
 
       </div>
@@ -158,7 +173,7 @@
             <div class="inbox-menu-pagination">
               1-50 of 262
             </div>
-  
+
             <div class="inbox-menu-pagination-btn">
               <span class="pagination-btn">
                 <img src="/app/assets/icons/" alt="" class="pagination-btn-icon">
@@ -167,7 +182,7 @@
                 <img src="/app/assets/icons/" alt="" class="pagination-btn-icon">
               </span>
             </div>
-            
+
             <button class="inbox-menu-btn">
               <img src="/app/assets/icons/" alt="" class="inbox-menu-btn-icon">
               <img src="/app/assets/icons/" alt="" class="inbox-menu-btn-icon-sm">
@@ -200,42 +215,44 @@
 
           <div class="inbox-messages">
 
-              <div class="message">
+            <div class="message">
 
-                <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Select" class="message-btn-icon icon-tooltip">
-                </button>
+              <button class="message-btn">
+                <img src="/app/assets/icons/" alt="Select" class="message-btn-icon">
+              </button>
 
               <div class="message-options">
 
                 <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Archive" class="message-btn-icon icon-tooltip">
+                  <img src="/app/assets/icons/" alt="Archive" class="message-btn-icon">
                 </button>
 
                 <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Delete" class="message-btn-icon icon-tooltip">
+                  <img src="/app/assets/icons/" alt="Delete" class="message-btn-icon">
                 </button>
 
                 <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Mark as unread" class="message-btn-icon icon-tooltip">
+                  <img src="/app/assets/icons/" alt="Mark as unread" class="message-btn-icon">
                 </button>
 
                 <button class="message-btn">
-                  <img src="/app/assets/icons/" alt="Snooze class="message-btn-icon icon-tooltip">
+                  <img src="/app/assets/icons/" alt="Snooze class=" message-btn-icon">
                 </button>
 
               </div>
 
               <button class="message-btn message-btn-star">
-                <img src="/app/assets/icons/" alt="Not starred" class="message-btn-icon icon-tooltip">
+                <img src="/app/assets/icons/" alt="Not starred" class="message-btn-icon">
               </button>
 
 
-                <span class="message-title">no-reply</span>\
-                <span class="message-subject">Notice of completion of deletion request</span>
-                <span class="message-content"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem. </span>
-              
-              </div>
+              <span class="message-title">no-reply</span>\
+              <span class="message-subject">Notice of completion of deletion request</span>
+              <span class="message-content"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta error
+                beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis
+                harum at. Facere, exercitationem. </span>
+
+            </div>
 
           </div>
 
@@ -272,10 +289,11 @@
         </div>
 
       </div>
-    
+
     </div>
 
   </div>
-  
+
 </body>
+
 </html>

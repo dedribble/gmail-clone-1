@@ -1,10 +1,126 @@
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: var(--font);
 }
 
 html, body {
   font-size: 16px;
   color: var(--black);
+  width: 100%;
+  height: 100%;
 }
 
+#wrapper {
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  height: 64px;
+  background-color: white;
+  border-bottom: 1px solid var(--fill-grey);
+}
+
+.header-group {
+  display: flex;
+  align-items: center;
+}
+
+.header-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  background: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  margin: 0 2px;
+
+  z-index: 3;
+}
+
+.header-btn:hover {
+  background-color: var(--fill-hover);
+}
+
+.header-btn-icon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: var(--opacity);
+  border-radius: 50%;
+  border: none;
+}
+
+.tooltip::after {
+  content: attr(btn-info);
+
+  display: block;
+  position: absolute;
+  color: white;
+  font-size: var(--font-sm);
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: -24px;
+  margin: 0 2px;
+  padding: .2em 0.35em;
+  border-radius: 4px;
+  word-wrap: none;
+  white-space: nowrap;
+}
+
+/* .header-btn:hover .tooltip::after {
+  display: block;
+} */
+
+.header-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--fill-grey);
+  border-radius: 8px;
+  padding: 3px 8px;
+  margin:  0 1rem;
+  max-width: 720px;
+
+  flex: 1 4;
+}
+
+.header-search-input {
+  display: block; 
+  font-family: var(--font-sec);
+  font-size: var(--font-m);
+  font-weight: 400;
+  background-color: transparent;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  outline: none;
+}
+
+#header-profile {
+  height: 40px;
+  width: 40px;
+}
+
+.header-profile {
+  height: 32px;
+  width: 32px;
+  opacity: 1;
+}
+
+#header-menu {
+  width: 48px;
+  height: 48px;
+  margin: 4px;
+}
