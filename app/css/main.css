@@ -31,7 +31,9 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .body-wrapper {
 	display: grid;
-	grid-template-columns: 270px auto 55px;
+	grid-template-columns:
+		270px repeat(auto-fit, calc(100vw - 254px - 12px - 35px - 24px))
+		55px;
 	grid-template-rows: 64px calc(100vh - 64px);
 	overflow: hidden;
 }
@@ -40,7 +42,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 40px;
+	min-width: 40px;
 	height: 40px;
 	background: none;
 	border-radius: 999px;
@@ -226,6 +228,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .left-sidebar-compose {
 	padding: 0 10px;
 	margin: 16px 0;
+	display: flex;
 }
 
 .sidebar-btn-compose {
@@ -235,7 +238,8 @@ input[type="search"]::-webkit-search-cancel-button {
 	font-size: var(--font-m);
 	line-height: 1.5rem;
 	background: white;
-	width: 145px;
+	min-width: 48px;
+	/* width: 145px; */
 	height: 48px;
 	vertical-align: middle;
 	padding: 5px;
@@ -243,10 +247,14 @@ input[type="search"]::-webkit-search-cancel-button {
 	border-radius: 999px;
 	cursor: pointer;
 	user-select: none;
+	overflow: hidden;
+
 	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
 		0 1px 3px 1px rgba(60, 64, 67, 0.149);
 
 	transition: box-shadow 150ms ease;
+
+	flex: 0 1 145px;
 }
 
 .sidebar-btn-compose:hover {
@@ -255,7 +263,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .sidebar-btn-compose-icon {
-	margin-left: 9px;
+	margin-left: 6px;
 }
 
 .sidebar-btn-compose-title {
@@ -264,6 +272,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	font-size: 0.875rem;
 	font-weight: 500;
 	letter-spacing: 0.25px;
+	margin-left: 8px;
 	margin-right: 18px;
 }
 
@@ -499,6 +508,12 @@ input[type="search"]::-webkit-search-cancel-button {
 	background-color: white;
 	padding: 0 12px;
 	border-bottom: 1px solid var(--fill-border);
+	overflow: hidden;
+}
+
+.inbox-container {
+	overflow: hidden;
+	flex: 1 0 auto;
 }
 
 .inbox-menu-group {
@@ -548,6 +563,8 @@ input[type="search"]::-webkit-search-cancel-button {
 	letter-spacing: 0.25px;
 	white-space: nowrap;
 	border-bottom: 1px solid var(--fill-border);
+
+	overflow: hidden;
 }
 
 .inbox-category-item {
@@ -607,35 +624,116 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ---- MESSAGES ITEM ---- */
 
-.inbox-messages {
+.mail {
 	display: flex;
 	flex-flow: column;
-	width: 100%;
 	overflow: hidden;
 	overflow-y: auto;
 	padding-bottom: 8px;
 }
 
-.inbox-messages-item {
+.inbox-message-item {
 	position: relative;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row;
 	font: var(--font);
-	font-size: 0.875rem;
 	align-items: center;
+	font-size: 0.875rem;
+	width: 100%;
 	height: 40px;
-	padding: 10px 0;
 	padding-right: 8px;
 	padding-left: 4px;
 
+	overflow: hidden;
 	box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%);
 }
 
-.inbox-messages-item:hover {
+.inbox-message-item:hover {
 	cursor: pointer;
 	box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0,
 		0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
 	z-index: 1;
+}
+
+.inbox-message-item-options {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	height: 40px;
+	width: min-content;
+	user-select: none;
+	background-color: transparent;
+
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.inbox-message-item-options * {
+	margin: 0;
+}
+
+.message-default {
+	display: flex;
+	align-items: center;
+	font-family: var(--font);
+	color: var(--light-grey);
+	white-space: nowrap;
+	overflow: hidden;
+	user-select: none;
+}
+
+.message-content {
+	padding: 0 2px;
+}
+
+.gap.message-content {
+	display: block;
+	background: transparent;
+	min-width: 70px;
+
+	flex: 0 70px;
+}
+
+.message-default .message-sender {
+	padding-right: 2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	flex: 0 0 200px;
+}
+
+.message-default .message-subject {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	flex: 0 0 auto ;
+}
+
+.message-default .message-body {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	flex: 0 1 max-content;
+}
+
+.message-default .message-date {
+	position: relative;
+	height: 40px;
+	right: 0;
+	top: 0;
+	color: var(--grey);
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-align: right;
+	letter-spacing: 0.15px;
+	margin-right: 8px;
+	/* background-color: rgb(212, 177, 226); */
+
+	z-index: 1;
+
+	flex: 0 56px;
 }
 
 .message-group-hidden {
@@ -643,29 +741,17 @@ input[type="search"]::-webkit-search-cancel-button {
 	transition: opacity 150ms ease;
 }
 
-.inbox-messages-item:hover .message-group-hidden {
+.inbox-message-item:hover .message-group-hidden {
 	display: block;
 }
-
-.inbox-messages-item-options {
-	position: absolute;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	min-height: 40px;
-	width: min-content;
-	user-select: none;
-
-	margin-right: 8px;
-	top: 0;
-	z-index: 2;
+.inbox-message-item:hover .gap.message-content,
+.inbox-message-item:hover .message-date {
+	display: none;
 }
 
-.inbox-messages-item-options * {
-	margin: 0;
-}
+/* ------ */
 
-.btn-drag-indicator {
+.drag-indicator {
 	position: absolute;
 	margin-left: -4px;
 	left: 0;
@@ -676,12 +762,18 @@ input[type="search"]::-webkit-search-cancel-button {
 	opacity: 0.22;
 }
 
-.inbox-messages-item:hover .message-btn-icon {
-	opacity: .55;
+.inbox-message-item:hover .message-btn-icon {
+	opacity: 0.55;
 }
 
 .checkbox {
 	margin-right: -12px;
+}
+
+.center-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ==== RIGHT SIDEBAR ==== */
@@ -711,15 +803,115 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ==== MEDIA QUERIES ==== */
 
-/* 768px, 1024px */
+/* 768px, 950px, 1024px */
+
+@media screen and (max-width: 1200px) {
+	
+	.message-default .message-subject {
+		flex: 0 1 auto;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.inbox-message-item {
+		align-items: flex-start;
+		height: unset;
+	}
+
+	.message-default {
+		flex-flow: row wrap;
+		white-space: nowrap;
+		padding-left: 10px;
+		margin: 10px 0;
+	}
+
+	.inbox-message-item-options {
+		position: absolute;
+		background-color: transparent;
+		right: 8px;
+		top: 0;
+
+		z-index: 2;
+	}
+
+	.message-seperator {
+		display: none;
+	}
+
+	.message-content {
+		padding: 4px 0;
+	}
+
+	.message-default .message-sender {
+		flex: 1 1 100%;
+	}
+	
+	.message-default .message-subject {
+		flex: 0 1 100%;
+	}
+
+	.message-default .message-body {
+		flex: 0 1 80%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.message-default .message-date {
+		position: absolute;
+		height: 40px;
+		right: 0;
+		top: 0;
+		color: var(--grey);
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-align: right;
+		letter-spacing: 0.15px;
+		margin-right: 8px;
+
+		z-index: 1;
+
+		flex: 0 0 56px;
+	}
+
+	.checkbox {
+		order: -1;
+	}
+
+	.star {
+		position: absolute;
+		right: 8px;
+		bottom: 0;
+		z-index: 3;
+	}
+
+	.gap.message-content {
+		order: 3;
+	}
+
+	.inbox-message-item:hover .message-date {
+		display: none;
+	}
+}
 
 @media screen and (max-width: 768px) {
+
 	.inbox-menu-pagination {
 		max-width: 7ch;
-		overflow: hidden;
-		word-wrap: none;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		/* margin-right: -8px; */
+		overflow: hidden;
 	}
+
+	.gap.message-content{
+		background-color: violet;
+		display: none;
+	}
+
+	.message-default .message-subject {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		flex: 0 1 max-content;
+	}
+
+
 }
