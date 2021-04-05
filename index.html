@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gmail</title>
+  <link rel="icon"  href="./favicon.png" type="image/png">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="/app/css/reset.css">
   <link rel="stylesheet" href="/app/css/presets.css">
   <link rel="stylesheet" href="/app/css/main.css">
   <!-- <link rel="stylesheet" href="/app/css/_main.css"> -->
-
 </head>
 
 <body>
@@ -306,7 +307,7 @@
               
               <div class="inbox-message-item">
 
-                <div class="checkbox">
+                <div class="checkbox" style="margin-right: -12px;" >
                   <button class="btn">
                     <img src="/app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
                   </button>
@@ -326,13 +327,12 @@
 
                 <div class="message-default" >
 
-                  <div class="message-sender message-content" >
+                  <div class="message-sender message-content unread" >
                     <span >Cascadom</span>
                   </div>
       
-                  <div class="message-subject message-content">
-                    <span>Horror stories: 2000 lines of inline styles</span>
-                    <!-- <span>Notice of completion of deletion request</span> -->
+                  <div class="message-subject message-content unread">
+                    <span>Horror stories: 👻 2000 lines of inline styles</span>
                   </div>
 
                   <div class="message-seperator message-content"> - </div>
@@ -343,7 +343,7 @@
                   
                   <div class="gap message-content" > &nbsp; </div>
 
-                  <div class="message-date center-text" >
+                  <div class="message-date center-text unread" >
                     <span>12:09 AM</span>
                   </div>
 
@@ -375,17 +375,38 @@
 
           <footer class="activity">
             <div class="footer-container">
-              <div class="">
-                <span>Horror stories: 2000 lines of inline styles</span>
+
+              <div class="footer-item">
+                <span class="progressbar" ></span>
+                <a href="#" class="footer-link footer-text-sm">
+
+                  
+                  <div class="footer-group">
+                    <span> 0 GB of 15 GB used</span> 
+                    <span>
+                      <img style="height: 18px; width: 18px; margin: 0 8px; padding: 0;" src="/app/assets/icons/open_in_new_black_24dp.svg" alt="Google drive storage" class="btn-icon-alt btn-icon-sm">
+                    </span>
+                  </div>
+
+                </a>
               </div>
 
-              <div class="">
-                <span>Horror stories: 2000 lines of inline styles</span>
+              <div class="footer-item">
+                <a href="#`" class="footer-link footer-text-sm"> Terms </a>
+                ·
+                <a href="#" class="footer-link footer-text-sm">  Privacy </a>
+                ·
+                <a href="#" class="footer-link footer-text-sm">  Program Policies </a>
               </div>
 
-              <div class="">
-                <span>Horror stories: 2000 lines of inline styles</span>
+              <div class="footer-item">
+                <span class="footer-text-sm" >Last activity: 37 minutes ago</span>
+                
+                <div class="footer-group">
+                  <a href="#" class="footer-link footer-text-sm">Details</a>
+                </div>
               </div>
+
             </div>
           </footer>
 
