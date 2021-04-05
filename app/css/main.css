@@ -29,15 +29,6 @@ input[type="search"]::-webkit-search-cancel-button {
 	-webkit-appearance: none;
 }
 
-.body-wrapper {
-	display: grid;
-	grid-template-columns:
-		270px repeat(auto-fit, calc(100vw - 254px - 12px - 35px - 24px))
-		55px;
-	grid-template-rows: 64px calc(100vh - 64px);
-	overflow: hidden;
-}
-
 .btn {
 	display: flex;
 	align-items: center;
@@ -133,6 +124,17 @@ input[type="search"]::-webkit-search-cancel-button {
 .hrt-rule {
 	height: 1px;
 	background-color: #dadce0;
+}
+
+/* GRID */
+
+.body-wrapper {
+	display: grid;
+	grid-template-columns:
+		270px repeat(auto-fit, calc(100vw - 254px - 12px - 35px - 24px))
+		55px;
+	grid-template-rows: 64px calc(100vh - 64px);
+	overflow: hidden;
 }
 
 /* ==== HEADER ==== */
@@ -708,7 +710,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
-	flex: 0 0 auto ;
+	flex: 0 0 auto;
 }
 
 .message-default .message-body {
@@ -806,7 +808,6 @@ input[type="search"]::-webkit-search-cancel-button {
 /* 768px, 950px, 1024px */
 
 @media screen and (max-width: 1200px) {
-	
 	.message-default .message-subject {
 		flex: 0 1 auto;
 	}
@@ -845,7 +846,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	.message-default .message-sender {
 		flex: 1 1 100%;
 	}
-	
+
 	.message-default .message-subject {
 		flex: 0 1 100%;
 	}
@@ -894,7 +895,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 @media screen and (max-width: 768px) {
-
 	.inbox-menu-pagination {
 		max-width: 7ch;
 		white-space: nowrap;
@@ -902,7 +902,7 @@ input[type="search"]::-webkit-search-cancel-button {
 		overflow: hidden;
 	}
 
-	.gap.message-content{
+	.gap.message-content {
 		background-color: violet;
 		display: none;
 	}
@@ -912,6 +912,4 @@ input[type="search"]::-webkit-search-cancel-button {
 		text-overflow: ellipsis;
 		flex: 0 1 max-content;
 	}
-
-
 }
