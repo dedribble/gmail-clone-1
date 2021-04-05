@@ -14,15 +14,17 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 9px;
+	width: 16px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: white;
+	background: none;
 }
 
 ::-webkit-scrollbar-thumb {
 	background-color: #bababa;
+	border-left: 4px solid #ffffff;
+	/* border-right: none solid #ffffff; */
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -130,9 +132,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .body-wrapper {
 	display: grid;
-	grid-template-columns:
-		270px repeat(auto-fit, calc(100vw - 254px - 12px - 35px - 24px))
-		55px;
+	grid-template-columns: 270px 1fr 55px;
+	/* grid-template-columns: 270px repeat(auto-fit, calc(100vw - 254px - 12px - 35px - 24px))	55px; */
 	grid-template-rows: 64px calc(100vh - 64px);
 	overflow: hidden;
 }
@@ -492,14 +493,16 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ==== INBOX CONTENT ==== */
 
-.inbox {
-	display: flex;
-	flex-flow: column;
-	margin-right: 16px;
+/* -------------------------------------- */
 
+.inbox {
 	grid-column: 2 / 3;
 	grid-row: 2 / -1;
+
+	overflow: hidden;
 }
+
+/* -------------------------------------- */
 
 .inbox-menu {
 	display: flex;
@@ -507,16 +510,23 @@ input[type="search"]::-webkit-search-cancel-button {
 	align-items: center;
 	justify-content: space-between;
 	height: 48px;
+	width: auto;
 	background-color: white;
 	padding: 0 12px;
 	border-bottom: 1px solid var(--fill-border);
-	overflow: hidden;
+	/* overflow: hidden; */
+	
+	margin-right: 16px;
 }
 
+/* -------------------------------------- */
+
 .inbox-container {
-	overflow: hidden;
-	flex: 1 0 auto;
+	display: flex;
+	flex-flow: column;
 }
+
+/* -------------------------------------- */
 
 .inbox-menu-group {
 	display: flex;
@@ -556,7 +566,6 @@ input[type="search"]::-webkit-search-cancel-button {
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	align-items: center;
-	width: 100%;
 	height: 56px;
 	color: var(--light-grey);
 	font-family: var(--font-sec);
@@ -567,6 +576,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	border-bottom: 1px solid var(--fill-border);
 
 	overflow: hidden;
+	margin-right: 16px;
 }
 
 .inbox-category-item {
@@ -614,10 +624,10 @@ input[type="search"]::-webkit-search-cancel-button {
 	content: "";
 	position: absolute;
 	display: block;
-	height: 3px;
+	height: 4px;
 	background-color: var(--red);
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -626,13 +636,32 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ---- MESSAGES ITEM ---- */
 
-.mail {
-	display: flex;
-	flex-flow: column;
-	overflow: hidden;
-	overflow-y: auto;
-	padding-bottom: 8px;
+
+/* -------------------------------------- */
+
+.content {
+	display: block;
+	/* flex-flow: column;
+	justify-content: flex-start; */
+	box-sizing: border-box;
+	margin-bottom: 16px;
+	overflow:hidden;
+	overflow-y: scroll;
+
+	max-height: 350px;
 }
+
+/* -------------------------------------- */
+
+.mail {
+	box-sizing: border-box;
+	/* padding-right: 8px; */
+	padding-bottom: 8px;
+	
+	flex: 0 0;
+}
+
+/* -------------------------------------- */
 
 .inbox-message-item {
 	position: relative;
@@ -641,12 +670,10 @@ input[type="search"]::-webkit-search-cancel-button {
 	font: var(--font);
 	align-items: center;
 	font-size: 0.875rem;
-	width: 100%;
 	height: 40px;
 	padding-right: 8px;
 	padding-left: 4px;
 
-	overflow: hidden;
 	box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%);
 }
 
@@ -663,7 +690,6 @@ input[type="search"]::-webkit-search-cancel-button {
 	flex-flow: row nowrap;
 	align-items: center;
 	height: 40px;
-	width: min-content;
 	user-select: none;
 	background-color: transparent;
 
@@ -683,11 +709,13 @@ input[type="search"]::-webkit-search-cancel-button {
 	color: var(--light-grey);
 	white-space: nowrap;
 	overflow: hidden;
+	overflow-x: hidden;
 	user-select: none;
 }
 
 .message-content {
 	padding: 0 2px;
+	line-height: 1.1;
 }
 
 .gap.message-content {
@@ -717,7 +745,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
-	flex: 0 1 max-content;
+	flex: 1 1 auto;
 }
 
 .message-default .message-date {
@@ -801,6 +829,20 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .app-group > :nth-last-child(1) {
 	margin-top: 6px;
+}
+
+/* FOOTER */
+
+.footer-container {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 16px;
+	margin: 16px 0;
+	height: 75px;
+	background-color: rgb(226, 180, 226);
+	border: 1px solid red;
 }
 
 /* ==== MEDIA QUERIES ==== */
