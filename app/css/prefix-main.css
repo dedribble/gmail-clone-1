@@ -1336,6 +1336,28 @@ input[type="search"]::-webkit-search-cancel-button {
 	.inbox-message-item:hover .message-date {
 		display: none;
 	}
+
+	.footer-item:nth-child(2) {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: column;
+		flex-flow: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		white-space: nowrap;
+		padding-left: 12px;
+		padding-right: 12px;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+	}
 }
 
 /* ---- 768px ----*/
